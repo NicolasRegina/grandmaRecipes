@@ -66,9 +66,13 @@
                             @endif
                         @else
                         @if(Auth::user()->is_admin)
-                            <span class="badge bg-danger text-light d-flex align-items-center justify-content-center" style="font-size:0.8rem;">Web Master</span>
+                            <span class="badge bg-secondary text-white d-flex align-items-center justify-content-center" style="font-size:0.8rem;">
+                                🛡️ Web Master
+                            </span>
                         @elseif(Auth::user()->is_premium)
-                            <span class="badge bg-warning text-dark d-flex align-items-center justify-content-center" style="font-size:0.8rem;">Premium</span>
+                            <span class="badge bg-warning text-dark d-flex align-items-center justify-content-center" style="font-size:0.8rem;">
+                                💎 Premium
+                            </span>
                         @else
                             <span>
                                 <a href="{{ route('premium.info') }}" class="btn btn-warning" style="font-weight:600;">
