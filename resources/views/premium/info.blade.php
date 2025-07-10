@@ -18,8 +18,8 @@
                         <li class="list-group-item"><i class="fas fa-check text-success me-2"></i> Prioridad en soporte y sugerencias</li>
                         <li class="list-group-item"><i class="fas fa-check text-success me-2"></i> ¡Y mucho más!</li>
                     </ul>
-                    <a href="#" class="btn btn-warning btn-lg mt-2 disabled" style="font-weight:600;">
-                        <i class="fas fa-shopping-cart me-1"></i> Próximamente: Comprar Premium
+                    <a href="{{ route('mp.show-buy-form') }}" class="btn btn-warning btn-lg mt-3" style="font-weight:600;">
+                        <i class="fas fa-crown me-1"></i> Hazte Premium
                     </a>
                 </div>
             </div>

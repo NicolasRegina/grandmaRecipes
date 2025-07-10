@@ -47,3 +47,9 @@ Route::middleware(['auth', 'admin'])->prefix('admin')->name('admin.')->group(fun
 Route::get('/premium', function () {
     return view('premium.info');
 })->name('premium.info');
+
+// Rutas de Mercado Pago
+Route::get('mp/comprar', [\App\Http\Controllers\MercadoPagoController::class, 'showBuyForm'])->name('mp.show-buy-form');
+Route::get('mp/exito', [\App\Http\Controllers\MercadoPagoController::class, 'success'])->name('mp.success');
+Route::get('mp/pendiente', [\App\Http\Controllers\MercadoPagoController::class, 'pending'])->name('mp.pending');
+Route::get('mp/fallo', [\App\Http\Controllers\MercadoPagoController::class, 'failure'])->name('mp.failure');
