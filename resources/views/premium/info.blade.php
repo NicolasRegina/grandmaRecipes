@@ -18,9 +18,21 @@
                         <li class="list-group-item"><i class="fas fa-check text-success me-2"></i> Prioridad en soporte y sugerencias</li>
                         <li class="list-group-item"><i class="fas fa-check text-success me-2"></i> ¡Y mucho más!</li>
                     </ul>
-                    <a href="{{ route('mp.show-buy-form') }}" class="btn btn-warning btn-lg mt-3" style="font-weight:600;">
-                        <i class="fas fa-crown me-1"></i> Hazte Premium
-                    </a>
+                    @auth
+                        @if (!Auth::user()->is_premium)
+                            <a href="{{ route('mp.show-buy-form') }}" class="btn btn-warning btn-lg mt-3" style="font-weight:600;">
+                                <i class="fas fa-crown me-1"></i> Hazte Premium
+                            </a>
+                        @else
+                            <button class="btn btn-success btn-lg mt-3" disabled style="font-weight:600;">
+                                <i class="fas fa-crown me-1"></i> ¡Ya eres Premium!
+                            </button>
+                        @endif
+                    @else
+                        <a href="{{ route('login') }}" class="btn btn-warning btn-lg mt-3" style="font-weight:600;">
+                            <i class="fas fa-sign-in-alt me-1"></i> Inicia sesión para ser Premium
+                        </a>
+                    @endauth
                 </div>
             </div>
             <a href="{{ route('home') }}" class="btn btn-outline-secondary mt-3">

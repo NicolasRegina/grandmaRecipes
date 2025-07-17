@@ -9,7 +9,7 @@
 </div>
 <script src="https://sdk.mercadopago.com/js/v2"></script>
 <script>
-    const mp = new MercadoPago("APP_USR-8e40272b-b5b5-48bc-80d1-4c0755f88c2c");
+    const mp = new MercadoPago("APP_USR-a4a7e26b-cfd1-47d5-a7a8-ad13213d8efa");
     mp.bricks().create(
         "wallet",
         "checkout",

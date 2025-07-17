@@ -20,7 +20,7 @@ class MercadoPagoController extends Controller
             ]
         ];
 
-        MercadoPagoConfig::setAccessToken("APP_USR-2696511902048525-071016-b372f6bd45d25c1d2cb82872c0ffae42-159557010");
+        MercadoPagoConfig::setAccessToken("APP_USR-8882687493628409-071019-d239541fcb667c39bc4374f37b70a177-2508934062");
 
         $preferenceFactory = new PreferenceClient();
         try {
